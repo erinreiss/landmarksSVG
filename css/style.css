@@ -12,9 +12,24 @@ body {
 	font-family: 'Lora', serif;
 }
 
-.bold{
-	font-style: italic;
+#base{
+	width: 100vw;
+	z-index: -1;
+	position: absolute;
 }
+
+.location{
+	padding-bottom: 2vh;
+	color: #ed1c24;
+	text-align: right;
+}
+
+.lName{
+	font-family: 'Lora', serif;
+	font-weight: 800;
+    font-size: 25px;
+}
+
 
 .button{
 	font-family: 'Slabo 27px', serif;
@@ -25,15 +40,6 @@ body {
 	background-color: rgba(67, 125, 225, 0.45);
 	border-color: black;
 	cursor: pointer;
-}
-
-#skipIntro{
-	width: 132px;
-	top: 30px;
-	left: 30px;
-	position: absolute;
-	font-size: 18px;
-	visibility: hidden;
 }
 
 /*Map Elements*/
