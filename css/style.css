@@ -31,6 +31,12 @@ body {
 }
 
 
+
+
+
+
+
+
 .button{
 	font-family: 'Slabo 27px', serif;
 	font-size: 23px;
@@ -53,63 +59,17 @@ body {
 	visibility: hidden;
 }
 
-/*Intros*/
-
-	/*Intro Slide*/
-
-		#introSlideContent{
-			position: absolute;
-			height: 100vh;
-			top: 0%;
-			background: rgba(255, 255, 255, 0.76);
-		}
-
-			#introTitle{
-				margin-top: 97px;
-				margin-bottom: 67px;
-				/*text-align: center;*/
-			}
-
-			#introSubTitle{
-				color: black;
-				font-size: 32px;
-				letter-spacing: 2px;
-				margin-bottom: 10px;
-				text-align: center;
-			}
-
-			#introBody{
-				color: black;
-				font-size: 17px;
-				width: 75%;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 7px;
-				line-height: 23px;
-				text-align: center;
-			}
-
-			#next1{
-				width: 148px;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 60px;
-				margin-bottom: 261px;
-				}
-
-	/*Intro Pops*/
-	
-		.introPop{
-			visibility: hidden;
-			z-index: 2000;
-		}
-
-
-		.popNext{
-			cursor: pointer;
-		}
-
 /*Top Bar*/
+
+#streetsBar {
+	position: absolute;
+	top: 0;
+	height: 135px;
+	width: 100vw;
+	background: red;
+	padding: 7px;
+	z-index: 900
+}
 
 #clickStreet{
 	position: absolute;
@@ -133,17 +93,7 @@ body {
 	text-align: center;
 }
 
-#streetsBar {
-	position: absolute;
-	top: 0;
-	height: 135px;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.9);
-	color: #555;
-	padding: 7px;
-	box-sizing: border-box;
-	visibility: hidden;
-}
+
 
 /* Left side of the Streets Top Bar*/
 	

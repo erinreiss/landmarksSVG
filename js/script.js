@@ -6,8 +6,9 @@ var locations = $(".location");
 
 $(locations).mouseenter(
 	function(){
-		console.log(this.id);
+		// console.log(this.id);
 		$(this).fadeTo("opacity", ".39");
+		$(this).css('cursor', 'pointer');
 	}
 );
 
@@ -15,6 +16,7 @@ $(locations).mouseleave(
 	function(){
 		// console.log("exit");
 		$(this).fadeTo("opacity", "1");
+		$(this).css('cursor', 'default');
 	}
 );
 
@@ -32,23 +34,22 @@ $(locations).click(
 	function(){
 		$('#clickStreet').css('visibility','hidden');
 		$('#streetsBar').css('visibility','visible');
-		var thisID = (this.id);
-		// console.log(thisID);
-		for(var i=0;i<matchData.length;i++) {
-			if(matchData[i].id == thisID) {
+		var thisAudio = ("audio/"+this.id+".mp3");
+		var thisPhoto = ("images/"+this.id+"-a.jpg");
+		console.log(thisAudio);
+		changeTrack(thisAudio);
+		$('#speakerPhoto').attr("src",thisPhoto)
+
 				// console.log(matchData[i].audioFill);
-				$('.nameFill').text(matchData[i].nameFill);
-				$('.jobFill').text(matchData[i].jobFill);
-				$('.timeFill').text(matchData[i].timeFill);
-				$('.fromFill').text(matchData[i].fromFill);
-				$('.bioFill').html("&ldquo;" + matchData[i].bioFill + "&rdquo;");
-				$('#streetTitleCh').html("&ldquo;" + matchData[i].streetTitleCh + "&rdquo;");
-				$('#streetTitleEn').text(matchData[i].streetTitleEn);
-				$('#speakerPhoto').attr("src",matchData[i].speakerPhoto)
-				changeTrack(matchData[i].audioFill);
-				break;
-			}
-		}
+				// $('.nameFill').text(matchData[i].nameFill);
+				// $('.jobFill').text(matchData[i].jobFill);
+				// $('.timeFill').text(matchData[i].timeFill);
+				// $('.fromFill').text(matchData[i].fromFill);
+				// $('.bioFill').html("&ldquo;" + matchData[i].bioFill + "&rdquo;");
+				// $('#streetTitleCh').html("&ldquo;" + matchData[i].streetTitleCh + "&rdquo;");
+				// $('#streetTitleEn').text(matchData[i].streetTitleEn);
+				// changeTrack(matchData[i].audioFill);
+				// break;
 	}
 );
 
