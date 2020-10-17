@@ -16,12 +16,12 @@ body {
 	width: 100vw;
 	z-index: -1;
 	position: absolute;
+	bottom: 0;
 }
 
 .location{
 	padding-bottom: 2vh;
 	color: #ed1c24;
-	text-align: right;
 }
 
 .lName{
@@ -29,6 +29,19 @@ body {
 	font-weight: 800;
     font-size: 25px;
 }
+
+#streetsBar {
+	position: absolute;
+    top: 91px;
+    height: 57vh;
+    width: 40vw;
+    background: red;
+    padding: 7px;
+    right: 28px;
+    z-index: 900;
+}
+
+
 
 
 
@@ -61,15 +74,7 @@ body {
 
 /*Top Bar*/
 
-#streetsBar {
-	position: absolute;
-	top: 0;
-	height: 135px;
-	width: 100vw;
-	background: red;
-	padding: 7px;
-	z-index: 900
-}
+
 
 #clickStreet{
 	position: absolute;

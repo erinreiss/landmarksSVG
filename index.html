@@ -13,46 +13,70 @@
 
  <!-- The Map -->
 
-	<div><img id="base" src="images/yinMap.jpg" style="border-style: dotted"></img></div>
+	<div><img id="base" src="images/yinMap.png" style="border-style: dotted"></img></div>
+
+ <!-- Titles -->
+
+ <div id="title">LANDMARKS</div>
+ <div id="subTitle">an audio exploration of personal landmarks</div>
+ <div id="pleaseClick">click on an address to listen</div>
 
  <!-- The Locations -->
 
-	<div style="width: 24vw; padding: 31vh 2vw;">
-		<div class="location" id="51-Bayard">
-			<div class="lName">Tai Pun Association</div>
+<div id="locationHolder" style="display: flex; width: 61vw;">
+	<span style="flex: 50%; text-align: right;">
+		<div class="location" id="64-Bayard">
+			<div class="lName">Mei Lei Wah</div>
 			<div class="lAddress">51 Bayard</div>	
 		</div>
 		<div class="location" id="67-Bayard">
 			<div class="lName">Lin Heong Cafe</div>
 			<div class="lAddress">67 Bayard</div>	
 		</div>
-	</div>
+		<div class="location" id="Mulberry-Baxter">
+			<div class="lName">Columbus Park</div>
+			<div class="lAddress">Mulberry & Baxter</div>	
+		</div>
+		<div class="location" id="21-Mott">
+			<div class="lName">Hop Kee</div>
+			<div class="lAddress">21 Mott</div>	
+		</div>
+	</span>
 
+	<span style="flex: 50%; text-align: left; padding-left: 3vw;">
+		<div class="location" id="13-Doyers">
+			<div class="lName">Nom Wah Tea Parlor</div>
+			<div class="lAddress">13 Doyers</div>	
+		</div>
+		<div class="location" id="TKTK">
+			<div class="lName">Chinese Opera House</div>
+			<div class="lAddress">5-7 Doyers</div>	
+		</div>
+		<div class="location" id="51-Bayard">
+			<div class="lName">Tai Pun Assn.</div>
+			<div class="lAddress">51 Bayard</div>	
+		</div>
+		<div class="location" id="19-Mott">
+			<div class="lName">Lonnie's Coffee Shop</div>
+			<div class="lAddress">19 Mott</div>	
+		</div>
+		<div class="location" id="62-Bayard">
+			<div class="lName">Gee How Oak Tin Assn.</div>
+			<div class="lAddress">62 Bayard</div>
+		</div>
+	</span>
+</div>
 <!-- Sound Bank -->
-<audio id='fPop'> <source src="audio/67-Bayard.mp3"></source> </audio>
+<!-- <audio id='fPop'> <source src="audio/67-Bayard.mp3"></source> </audio> -->
 
-<!-- The Top Bar -->
+<!-- Pop Up -->
 
 	<div id="streetsBar">
-
-		<!-- Left Side of TopBar -->
-
-		<div id="streetInfo">	
-			<div id="audioDiv"> 
-				<audio id="player" controls="controls"><source id="audioFill" src=""/></audio>
-			</div>
+		<i>Speaker Name</i><span class="nameFill"></span> 
+		<div id="audioDiv"> 
+			<audio id="player" controls="controls"><source id="audioFill" src=""/></audio>
 		</div>
-
-		<!-- Right Side of TopBar -->
-			<div id="speakerInfo">
-				<div id="photoSpace"><img id="speakerPhoto" src="" style="width:122px"></div>
-				<div id="speakerStats">
-					<i>Speaker Name</i><span class="nameFill"></span> 
-					<br><i>Location Name</i> <span class="fromFill"></span>
-					<br><i>Address</i> <span class="jobFill"></span>
-					<br><span class="bioFill">Something else?</span>
-				</div>
-			</div>
+		<div id="photoSpace"><img id="speakerPhoto" src="" style="width:122px"></div>
 	</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -38,7 +38,8 @@ $(locations).click(
 		var thisPhoto = ("images/"+this.id+"-a.jpg");
 		console.log(thisAudio);
 		changeTrack(thisAudio);
-		$('#speakerPhoto').attr("src",thisPhoto)
+		$('#speakerPhoto').attr("src",thisPhoto);
+		$('.nameFill').text(this.id);
 
 				// console.log(matchData[i].audioFill);
 				// $('.nameFill').text(matchData[i].nameFill);
