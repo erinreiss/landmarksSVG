@@ -13,10 +13,21 @@ body {
 }
 
 #base{
-	width: 100vw;
+	width: 80vw;
+	margin: 0 auto;
 	z-index: -1;
 	position: absolute;
 	bottom: 0;
+	opacity: .3;
+	/*border-style: dotted;*/
+}
+
+#locationHolder{
+	display: flex;
+    width: 97vw;
+    margin: auto;
+    padding-top: 6vh;
+    height: 94vh;
 }
 
 .location{
@@ -30,17 +41,24 @@ body {
     font-size: 25px;
 }
 
-#streetsBar {
-	position: absolute;
-    top: 91px;
-    height: 57vh;
-    width: 40vw;
-    background: red;
-    padding: 7px;
-    right: 28px;
-    z-index: 900;
+#locationPopup {
+    /*height: 57vh;*/
+    background-color: rgba(255, 0, 0, 0.6);
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
 
+#speaker{
+	padding-top: 8px;
+}
+
+#player{
+	display: table;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 17px;
+	}
 
 
 
@@ -48,6 +66,7 @@ body {
 
 
 
+/*
 
 
 .button{
@@ -60,9 +79,9 @@ body {
 	border-color: black;
 	cursor: pointer;
 }
-
+*/
 /*Map Elements*/
-
+/*
 #svg{
 	height: 100vh;
 }
@@ -70,11 +89,11 @@ body {
 .hLights {
 	cursor: pointer;
 	visibility: hidden;
-}
+}*/
 
 /*Top Bar*/
 
-
+/*
 
 #clickStreet{
 	position: absolute;
@@ -97,11 +116,11 @@ body {
 	letter-spacing: 13px;
 	text-align: center;
 }
-
+*/
 
 
 /* Left side of the Streets Top Bar*/
-	
+	/*
 	#streetInfo
 	{
 	float: left;
@@ -124,32 +143,29 @@ body {
 		text-align: center;
 	}
 
-	#audioDiv{
-		display: table;
-    	margin: 0 auto;
-	}
+*/
 
 /* Right side of the Streets Top Bar*/
 
-	#voiceOf{
+/*	#voiceOf{
 	    width: 200px;
 	    height: 100px;
 	    -ms-transform: rotate(-90deg);
 	    -webkit-transform: rotate(-90deg);
 	    transform: rotate(-90deg);
 	}
-
-	#speakerInfo {
+*/
+/*	#speakerInfo {
 		float: right;
 		width: 40%;
-	}
+	}*/
 
-	#speakerPhoto {
+/*	#speakerPhoto {
 		float: left;
 		margin-right: 14px;
 	}
-
-	#speakerStats {
+*/
+	/*#speakerStats {
 		font-size: 13.5px;
 		max-width: 550px;
 		margin-right: 13px;
@@ -158,4 +174,4 @@ body {
 
 		.bioFill{
 			line-height: 17px;
-		}
+		}*/

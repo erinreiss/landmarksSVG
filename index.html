@@ -14,18 +14,13 @@
 
  <!-- The Map -->
 
-	<div><img id="base" src="images/yinMap.png" style="border-style: dotted"></img></div>
+	<div><img id="base" src="images/yinMap.png"></img></div>
 
- <!-- Titles -->
-
- <div id="title" style="font-family: 'Krona One', sans-serif; color: navy; font-size: 51px; font-weight: 700;">LANDMARKS</div>
- <div id="subTitle">an audio exploration of personal landmarks</div>
- <div id="pleaseClick">click on an address to listen</div>
 
  <!-- The Locations -->
 
-<div id="locationHolder" style="display: flex; width: 61vw;">
-	<span style="flex: 50%; text-align: right;">
+<div id="locationHolder">
+	<span style="flex: 25%; text-align: right;">
 		<div class="location" id="64-Bayard">
 			<div class="lName">Mei Lei Wah</div>
 			<div class="lAddress">51 Bayard</div>	
@@ -44,7 +39,7 @@
 		</div>
 	</span>
 
-	<span style="flex: 50%; text-align: left; padding-left: 3vw;">
+	<span style="flex: 25%; text-align: left; padding-left: 3vw;">
 		<div class="location" id="13-Doyers">
 			<div class="lName">Nom Wah Tea Parlor</div>
 			<div class="lAddress">13 Doyers</div>	
@@ -66,19 +61,33 @@
 			<div class="lAddress">62 Bayard</div>
 		</div>
 	</span>
+
+ <!-- The Titles -->
+
+	<span style="flex: 50%; text-align: right;">
+		<div id="title" style="font-family: 'Krona One', sans-serif; color: navy; font-size: 51px; font-weight: 700;">LANDMARKS</div>
+	 	<div id="subTitle">an audio exploration of personal landmarks</div>
+	 	<br>
+	 	<div id="pleaseClick">click on an address to listen</div>
+	 	<br>
+	 	<br>
+	 	
+ <!-- The PopUp -->
+
+	 	<div id="locationPopup">
+			<div id="speaker"><i>Speaker: </i><span class="nameFill"></span></div>
+				<audio id="player" controls="controls"><source id="audioFill" src=""/></audio>
+			<div id="photoSpace" style="height: 47vh"><img id="speakerPhoto" src="" style="height: 90%"></div>
+		</div>
+	</span>
 </div>
+
 <!-- Sound Bank -->
 <!-- <audio id='fPop'> <source src="audio/67-Bayard.mp3"></source> </audio> -->
 
 <!-- Pop Up -->
 
-	<div id="streetsBar">
-		<i>Speaker Name</i><span class="nameFill"></span> 
-		<div id="audioDiv"> 
-			<audio id="player" controls="controls"><source id="audioFill" src=""/></audio>
-		</div>
-		<div id="photoSpace"><img id="speakerPhoto" src="" style="width:122px"></div>
-	</div>
+	
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/script.js"></script>

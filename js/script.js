@@ -33,7 +33,7 @@ $(locations).mouseleave(
 $(locations).click(
 	function(){
 		$('#clickStreet').css('visibility','hidden');
-		$('#streetsBar').css('visibility','visible');
+		$('#locationPopup').css('visibility','visible');
 		var thisAudio = ("audio/"+this.id+".mp3");
 		var thisPhoto = ("images/"+this.id+"-a.jpg");
 		console.log(thisAudio);
