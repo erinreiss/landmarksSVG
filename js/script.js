@@ -1,13 +1,30 @@
+//Load CSV Content using Json
+
+// $.getJSON("convertcsv.json", 
+// 	function(content){
+//     	console.log(content);
+//     	matchData = content;
+//     }
+// );
+
 // Set up some variables
 
 var locations = $(".location");
+
+// Give speaker name attribute // this doesn't work
+$(document).ready(function(){
+	$('#67-Bayard').data("lSpeakerName","Ping Chong")
+	$('#13-Doyers').data("lSpeakerName","Lori Tan Chinn")
+	$('#51-Bayard').attr("lSpeakerName","Margaret Yuen")
+});
+
 
 // Highlight location with mouse over
 
 $(locations).mouseenter(
 	function(){
 		// console.log(this.id);
-		$(this).fadeTo("opacity", ".39");
+		$(locations).not(this).css("opacity", ".39");
 		$(this).css('cursor', 'pointer');
 	}
 );
@@ -15,41 +32,43 @@ $(locations).mouseenter(
 $(locations).mouseleave(
 	function(){
 		// console.log("exit");
-		$(this).fadeTo("opacity", "1");
+		$(locations).css("opacity", "1");
 		$(this).css('cursor', 'default');
 	}
 );
 
 
 //Next2 Element Sound Click Listeners
-	var audiof = $("#fPop")[0];
-	$('#forsythPop').click(function() {
-	  	audiof.pause();
-    	audiof.load();
-    	audiof.play();
-	});
+	// var audiof = $("#fPop")[0];
+	// $('#forsythPop').click(function() {
+	//   	audiof.pause();
+ //    	audiof.load();
+ //    	audiof.play();
+	// });
 
 // Streets Click Listener
 $(locations).click(
 	function(){
-		$('#clickStreet').css('visibility','hidden');
-		$('#locationPopup').css('visibility','visible');
+		// $('#clickStreet').css('visibility','hidden');
+		// $('#locationPopup').css('visibility','visible');
 		var thisAudio = ("audio/"+this.id+".mp3");
 		var thisPhoto = ("images/"+this.id+"-a.jpg");
-		console.log(thisAudio);
+		console.log(this.id);
+		console.log(this.class);
+		console.log(this.data-speaker);
 		changeTrack(thisAudio);
 		$('#speakerPhoto').attr("src",thisPhoto);
-		$('.nameFill').text(this.id);
+		$('.lSpeaker').text(this.title);
 
-				// console.log(matchData[i].audioFill);
-				// $('.nameFill').text(matchData[i].nameFill);
+				// console.log(matchData[i].lAudio);
+				// $('.lSpeaker').text(matchData[i].lSpeaker);
 				// $('.jobFill').text(matchData[i].jobFill);
 				// $('.timeFill').text(matchData[i].timeFill);
 				// $('.fromFill').text(matchData[i].fromFill);
 				// $('.bioFill').html("&ldquo;" + matchData[i].bioFill + "&rdquo;");
 				// $('#streetTitleCh').html("&ldquo;" + matchData[i].streetTitleCh + "&rdquo;");
 				// $('#streetTitleEn').text(matchData[i].streetTitleEn);
-				// changeTrack(matchData[i].audioFill);
+				// changeTrack(matchData[i].lAudio);
 				// break;
 	}
 );
@@ -58,7 +77,7 @@ $(locations).click(
 
 function changeTrack(sourceUrl) {
     var audioDues = $("#player");      
-    $("#audioFill").attr("src", sourceUrl);
+    $("#lAudio").attr("src", sourceUrl);
     audioDues[0].pause();
     audioDues[0].load();//suspends and restores all audio element
     audioDues[0].play();
