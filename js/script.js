@@ -10,6 +10,9 @@
 // Set up some variables
 
 var locations = $(".location");
+// var speaker = $(".location").data("speaker");
+// console.log(speaker);
+// "2miles"
 
 // Give speaker name attribute // this doesn't work
 $(document).ready(function(){
@@ -44,16 +47,19 @@ $(locations).click(
 		// $('#locationPopup').css('visibility','visible');
 		var thisAudio = ("audio/"+this.id+".mp3");
 		var thisPhoto = ("images/"+this.id+"-a.jpg");
-		var thisSpeaker = (this.data-speaker);
-		console.log(this);
-		console.log(this.id);
-		console.log(this.class);
-		console.log(this.data-speaker);
-		console.log(this.data);
-		console.log(this.thisSpeaker);
+		// var thisSpeaker = (this.data-speaker);
+		var speaker = $(this).data("speaker");
+		console.log(speaker);
+		// console.log(this);
+		// console.log(this.id);
+		// console.log(this.class);
+		// console.log(this.speaker);
+		// console.log(this.data-speaker);
+		// console.log(this.data);
+		// console.log(this.thisSpeaker);
 		changeTrack(thisAudio);
 		$('#speakerPhoto').attr("src",thisPhoto);
-		$('.lSpeaker').text(this.title);
+		$('.lSpeaker').text(speaker);
 		//old stuff im keeping for now
 				// console.log(matchData[i].lAudio);
 				// $('.lSpeaker').text(matchData[i].lSpeaker);
