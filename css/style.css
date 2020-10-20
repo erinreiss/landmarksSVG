@@ -4,12 +4,12 @@ html {
 	height: 100vh;
 	overflow-y: hidden;
 	overflow-x: hidden;
+	font-family: 'Oswald', sans-serif;
 }
 
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Lora', serif;
 }
 
 #base{
@@ -36,7 +36,6 @@ body {
 }
 
 .lName{
-	font-family: 'Lora', serif;
 	font-weight: 800;
     font-size: 25px;
 }

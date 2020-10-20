@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Think!Chinatown Landmarks Map</title>
-	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
     </script>
 </head>
@@ -20,6 +19,10 @@
 
 <div id="locationHolder">
 	<span style="flex: 25%; text-align: right;">
+		<div class="location" id="About Landmarks" data-speaker="Think!Chinatown">
+			<div class="lName">About Landmarks</div>
+<!-- 			<div class="lAddress">51 Bayard</div>	
+ -->		</div>
 		<div class="location" id="64-Bayard" data-speaker="Alan Chin">
 			<div class="lName">Mei Lai Wah</div>
 			<div class="lAddress">51 Bayard</div>	
@@ -78,7 +81,7 @@
  <!-- The PopUp -->
 
 	 	<div id="locationPopup">
-			<div id="speaker"><i>Speaker: </i><span class="lSpeaker"></span></div>
+			<div id="speaker"><!-- <i>Speaker: </i> --><span class="lSpeaker"></span></div>
 				<audio id="player" controls="controls"><source id="lAudio" src=""/></audio>
 			<div id="photoSpace" style="height: 47vh"><img id="speakerPhoto" src="" style="height: 90%"></div>
 		</div>
