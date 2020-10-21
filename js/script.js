@@ -10,16 +10,6 @@
 // Set up some variables
 
 var locations = $(".location");
-// var speaker = $(".location").data("speaker");
-// console.log(speaker);
-// "2miles"
-
-// Give speaker name attribute // this doesn't work
-$(document).ready(function(){
-	$('#67-Bayard').data("lSpeakerName","Ping Chong")
-	$('#13-Doyers').data("lSpeakerName","Lori Tan Chinn")
-	$('#51-Bayard').attr("lSpeakerName","Margaret Yuen")
-});
 
 // Highlight location with mouse over
 
@@ -58,7 +48,7 @@ $(locations).click(
 		// console.log(this.data);
 		// console.log(this.thisSpeaker);
 		changeTrack(thisAudio);
-		$('#speakerPhoto').attr("src",thisPhoto);
+		// $('#speakerPhoto').attr("src",thisPhoto);
 		$('.lSpeaker').text(speaker);
 		//old stuff im keeping for now
 				// console.log(matchData[i].lAudio);
@@ -82,4 +72,33 @@ function changeTrack(sourceUrl) {
     audioDues[0].pause();
     audioDues[0].load();//suspends and restores all audio element
     audioDues[0].play();
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
