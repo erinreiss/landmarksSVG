@@ -33,22 +33,17 @@ $(locations).mouseleave(
 
 $(locations).click(
 	function(){
-		// $('#clickStreet').css('visibility','hidden');
-		// $('#locationPopup').css('visibility','visible');
 		var thisAudio = ("audio/"+this.id+".mp3");
-		var thisPhoto = ("images/"+this.id+"-a.jpg");
-		// var thisSpeaker = (this.data-speaker);
+		var thisPhotoA = ("images/"+this.id+"-a.jpg");
+		var thisPhotoB = ("images/"+this.id+"-b.jpg");
+		var thisPhotoC = ("images/"+this.id+"-c.jpg");
 		var speaker = $(this).data("speaker");
-		console.log(speaker);
-		// console.log(this);
-		// console.log(this.id);
-		// console.log(this.class);
-		// console.log(this.speaker);
-		// console.log(this.data-speaker);
-		// console.log(this.data);
-		// console.log(this.thisSpeaker);
+		console.log(thisPhotoC);
 		changeTrack(thisAudio);
-		// $('#speakerPhoto').attr("src",thisPhoto);
+		currentSlide(1);
+		$('#speakerPhotoA').attr("src",thisPhotoA);
+		$('#speakerPhotoB').attr("src",thisPhotoB);
+		$('#speakerPhotoC').attr("src",thisPhotoC);
 		$('.lSpeaker').text(speaker);
 		//old stuff im keeping for now
 				// console.log(matchData[i].lAudio);
