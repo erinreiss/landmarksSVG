@@ -10,16 +10,6 @@
 // Set up some variables
 
 var locations = $(".location");
-// var speaker = $(".location").data("speaker");
-// console.log(speaker);
-// "2miles"
-
-// Give speaker name attribute // this doesn't work
-$(document).ready(function(){
-	$('#67-Bayard').data("lSpeakerName","Ping Chong")
-	$('#13-Doyers').data("lSpeakerName","Lori Tan Chinn")
-	$('#51-Bayard').attr("lSpeakerName","Margaret Yuen")
-});
 
 // Highlight location with mouse over
 
@@ -43,22 +33,17 @@ $(locations).mouseleave(
 
 $(locations).click(
 	function(){
-		// $('#clickStreet').css('visibility','hidden');
-		// $('#locationPopup').css('visibility','visible');
 		var thisAudio = ("audio/"+this.id+".mp3");
-		var thisPhoto = ("images/"+this.id+"-a.jpg");
-		// var thisSpeaker = (this.data-speaker);
+		var thisPhotoA = ("images/"+this.id+"-a.jpg");
+		var thisPhotoB = ("images/"+this.id+"-b.jpg");
+		var thisPhotoC = ("images/"+this.id+"-c.jpg");
 		var speaker = $(this).data("speaker");
-		console.log(speaker);
-		// console.log(this);
-		// console.log(this.id);
-		// console.log(this.class);
-		// console.log(this.speaker);
-		// console.log(this.data-speaker);
-		// console.log(this.data);
-		// console.log(this.thisSpeaker);
+		console.log(thisPhotoC);
 		changeTrack(thisAudio);
-		$('#speakerPhoto').attr("src",thisPhoto);
+		currentSlide(1);
+		$('#speakerPhotoA').attr("src",thisPhotoA);
+		$('#speakerPhotoB').attr("src",thisPhotoB);
+		$('#speakerPhotoC').attr("src",thisPhotoC);
 		$('.lSpeaker').text(speaker);
 		//old stuff im keeping for now
 				// console.log(matchData[i].lAudio);
@@ -82,4 +67,33 @@ function changeTrack(sourceUrl) {
     audioDues[0].pause();
     audioDues[0].load();//suspends and restores all audio element
     audioDues[0].play();
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
