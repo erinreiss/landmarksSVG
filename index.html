@@ -10,7 +10,7 @@
 <body>
 
 
- <!-- The Map -->
+ <!-- The Background Image -->
 
 	<div><img id="base" src="images/yinMap.png"></img></div>
 
@@ -46,10 +46,6 @@
 			<div class="lName">Nom Wah Tea Parlor</div>
 			<div class="lAddress">13 Doyers</div>	
 		</div>
-	<!-- 	<div class="location" id="TKTK" data-speaker="Lori Tan Chinn">
-			<div class="lName">Chinese Opera House</div>
-			<div class="lAddress">5-7 Doyers</div>	
-		</div> -->
 		<div class="location" id="51-Bayard" data-speaker="Margaret Yuen">
 			<div class="lName">Tai Pun Assn.</div>
 			<div class="lAddress">51 Bayard</div>	
@@ -58,10 +54,6 @@
 			<div class="lName">Lonnie's Coffee Shop</div>
 			<div class="lAddress">19 Mott</div>	
 		</div>
-		<!-- <div class="location" id="62-Bayard" data-speaker="Amy Chin">
-			<div class="lName">Gee How Oak Tin Assn.</div>
-			<div class="lAddress">62 Bayard</div>
-		</div> -->
 		<div class="location" id="10-Pell" data-speaker="Amy Chin">
 			<div class="lName">Chin Family Assn.</div>
 			<div class="lAddress">10 Pell</div>	
@@ -80,16 +72,15 @@
 	 	
  <!-- The PopUp -->
 
-	 	<div id="locationPopup">
+	 	<div id="locationPopup" style="visibility: hidden;">
 			<div id="speaker"><!-- <i>Speaker: </i> --><span class="lSpeaker"></span></div>
 			<audio id="player" controls="controls"><source id="lAudio" src=""/></audio>
+		<!-- You would use this if it was just a single photo per site -->
 		<!-- 	<div id="photoSpace" style="height: 47vh">
 				<img id="speakerPhoto" src="" style="height: 90%">
 			</div> -->
 				<!-- Slideshow container -->
 				<div class="slideshow-container">
-
-				  <!-- Full-width images with number and caption text -->
 				  <div class="mySlides fade">
 				    <!-- <div class="numbertext">1 / 3</div> -->
 				    <img id="speakerPhotoA" class="photoS" src="">

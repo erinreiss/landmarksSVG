@@ -19,7 +19,6 @@ body {
 	position: absolute;
 	bottom: 0;
 	opacity: .5;
-	/*border-style: dotted;*/
 }
 
 #locationHolder{
@@ -65,7 +64,8 @@ body {
 .slideshow-container {
   position: relative;
   margin: auto;
-  height: 47vh;
+  max-height: 47vh;
+  min-height: 27vh;
 }
 
 .photoS{

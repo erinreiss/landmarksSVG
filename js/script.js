@@ -1,4 +1,4 @@
-//Load CSV Content using Json
+//Load CSV Content using Json - i didn't do this, to add attributes to each site I used "data-" feilds instead
 
 // $.getJSON("convertcsv.json", 
 // 	function(content){
@@ -33,6 +33,7 @@ $(locations).mouseleave(
 
 $(locations).click(
 	function(){
+		$('#locationPopup').css("visibility", "visible");
 		var thisAudio = ("audio/"+this.id+".mp3");
 		var thisPhotoA = ("images/"+this.id+"-a.jpg");
 		var thisPhotoB = ("images/"+this.id+"-b.jpg");
@@ -45,7 +46,7 @@ $(locations).click(
 		$('#speakerPhotoB').attr("src",thisPhotoB);
 		$('#speakerPhotoC').attr("src",thisPhotoC);
 		$('.lSpeaker').text(speaker);
-		//old stuff im keeping for now
+		//old stuff that works with Json
 				// console.log(matchData[i].lAudio);
 				// $('.lSpeaker').text(matchData[i].lSpeaker);
 				// $('.jobFill').text(matchData[i].jobFill);
@@ -68,6 +69,8 @@ function changeTrack(sourceUrl) {
     audioDues[0].load();//suspends and restores all audio element
     audioDues[0].play();
 }
+
+//Animating the slide show
 
 var slideIndex = 1;
 showSlides(slideIndex);
