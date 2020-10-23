@@ -35,16 +35,18 @@ $(locations).click(
 	function(){
 		$('#locationPopup').css("visibility", "visible");
 		var thisAudio = ("audio/"+this.id+".mp3");
-		var thisPhotoA = ("images/"+this.id+"-a.jpg");
-		var thisPhotoB = ("images/"+this.id+"-b.jpg");
-		var thisPhotoC = ("images/"+this.id+"-c.jpg");
+		var thisPhoto1 = ("images/"+this.id+"-1.jpg");
+		var thisPhoto2 = ("images/"+this.id+"-2.jpg");
+		var thisPhoto3 = ("images/"+this.id+"-3.jpg");
 		var speaker = $(this).data("speaker");
-		console.log(thisPhotoC);
+		var count = $(this).data("count");
+		console.log(count);
+		console.log(speaker);
 		changeTrack(thisAudio);
 		currentSlide(1);
-		$('#speakerPhotoA').attr("src",thisPhotoA);
-		$('#speakerPhotoB').attr("src",thisPhotoB);
-		$('#speakerPhotoC').attr("src",thisPhotoC);
+		$('#speakerPhoto1').attr("src",thisPhoto1);
+		$('#speakerPhoto2').attr("src",thisPhoto2);
+		$('#speakerPhoto3').attr("src",thisPhoto3);
 		$('.lSpeaker').text(speaker);
 		//old stuff that works with Json
 				// console.log(matchData[i].lAudio);
