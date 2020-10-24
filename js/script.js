@@ -10,6 +10,8 @@
 // Set up some variables
 
 var locations = $(".location");
+var pager = $('.pager');
+var slideshow = $('.slideshow-container');
 
 // Highlight location with mouse over
 
@@ -35,18 +37,38 @@ $(locations).click(
 	function(){
 		$('#locationPopup').css("visibility", "visible");
 		var thisAudio = ("audio/"+this.id+".mp3");
-		var thisPhoto1 = ("images/"+this.id+"-1.jpg");
-		var thisPhoto2 = ("images/"+this.id+"-2.jpg");
-		var thisPhoto3 = ("images/"+this.id+"-3.jpg");
 		var speaker = $(this).data("speaker");
 		var count = $(this).data("count");
+
+		// empty out pager and slideshow
+		$('.dot').remove();
+		$('.mySlides').remove();
+
+		// helper function to deal with for-loop scope of `i`
+		function handlePagerClick(index) {
+			return function() {
+				currentSlide(index);
+			}
+		}
+
+		var i;
+		for (i = 1; i <= count; i++) {
+			// populate pager
+			var pagerDot = $('<span />').addClass('dot');
+			pagerDot.click(handlePagerClick(i));
+			pager.append(pagerDot);
+
+			// populate slideshow
+			var newSlide = $('<div />').addClass('mySlides fade');
+			var newImg = $('<img />').addClass('photoS').attr('src', `images/${this.id}-${i}.jpg`);
+			newSlide.append(newImg);
+			slideshow.append(newSlide);
+		}
+		
 		console.log(count);
 		console.log(speaker);
 		changeTrack(thisAudio);
 		currentSlide(1);
-		$('#speakerPhoto1').attr("src",thisPhoto1);
-		$('#speakerPhoto2').attr("src",thisPhoto2);
-		$('#speakerPhoto3').attr("src",thisPhoto3);
 		$('.lSpeaker').text(speaker);
 		//old stuff that works with Json
 				// console.log(matchData[i].lAudio);
@@ -75,7 +97,6 @@ function changeTrack(sourceUrl) {
 //Animating the slide show
 
 var slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
