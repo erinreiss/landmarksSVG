@@ -82,6 +82,7 @@ body {
 .prev, .next {
   cursor: pointer;
   position: absolute;
+  z-index: 1;
   top: 50%;
   width: auto;
   margin-top: -22px;
