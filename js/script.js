@@ -20,6 +20,7 @@ $(locations).mouseenter(
 		// console.log(this.id);
 		$(locations).not(this).css("opacity", ".39");
 		$(this).css('cursor', 'pointer');
+		// $(this).addClass('locationH')
 	}
 );
 
@@ -28,6 +29,7 @@ $(locations).mouseleave(
 		// console.log("exit");
 		$(locations).css("opacity", "1");
 		$(this).css('cursor', 'default');
+		// $(this).removeClass('locationH')
 	}
 );
 
@@ -67,7 +69,7 @@ $(locations).click(
 		
 		console.log(count);
 		console.log(speaker);
-		changeTrack(thisAudio);
+		// changeTrack(thisAudio);
 		currentSlide(1);
 		$('.lSpeaker').text(speaker);
 		//old stuff that works with Json
@@ -81,6 +83,14 @@ $(locations).click(
 				// $('#streetTitleEn').text(matchData[i].streetTitleEn);
 				// changeTrack(matchData[i].lAudio);
 				// break;
+	}
+);
+
+//Closing the PopUp
+
+$('#mapImage').click(
+	function(){
+		$('#locationPopup').css("visibility", "hidden");
 	}
 );
 

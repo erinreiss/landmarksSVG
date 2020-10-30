@@ -12,39 +12,45 @@ body {
 	margin: 0;
 }
 
-#base{
-	width: 80vw;
-	margin: 0 auto;
-	z-index: -1;
-	position: absolute;
-	bottom: 0;
-	opacity: .5;
+#svg{
+  height: 100vh;
 }
+
+/*#base{
+	height: 100vh;
+	z-index: -1;
+  position: relative;
+}*/
 
 #locationHolder{
 	display: flex;
-    width: 97vw;
-    margin: auto;
-    padding-top: 6vh;
-    height: 94vh;
-}
-
-.location{
-	padding-bottom: 2vh;
-	color: #ed1c24;
+  width: 97vw;
+  margin: auto;
+  padding-top: 6vh;
+  height: 94vh;
 }
 
 .lName{
 	font-weight: 800;
-    font-size: 25px;
+  font-size: 25px;
+}
+
+.locationH {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
 }
 
 #locationPopup {
-    /*height: 57vh;*/
-    background-color: rgba(255, 0, 0, 0.6);
-    width: 90%;
+    width: 50vw;
+    position: absolute;
+    top: 15%;
+    left: 50%;
     margin: auto;
     text-align: center;
+}
+
+#locationPopupInner {
+    background-color: rgba(255, 0, 0, 0.6);
 }
 
 #speaker{
@@ -100,13 +106,13 @@ body {
 }
 
 /* Position the "next button" to the right */
-.next {
+  .next {
   right: 11px;
   /*border-radius: 3px 0 0 3px;*/
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+  .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
