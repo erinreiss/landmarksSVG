@@ -24,8 +24,8 @@
 	</g>
 
 	<g id="highlights">
-		<polygon id="Mulberry-Baxter" class="location" points="228.877 246.68 272.669 248.985 272.669 233.427 261.145 202.312 250.773 198.855 250.197 163.706 215.048 165.434 206.405 201.736 224.843 223.055 228.877 246.68" fill="#231f20" opacity="0"/>
-		<polygon id="21-Mott" class="location" points="484.412 90.975 472.745 100.68 472.745 118.95 466.381 122.375 465.32 145.212 491.837 162.34 500.322 153.205 493.958 98.397 484.412 90.975" fill="#231f20" opacity="0"/>
+		<polygon id="Mulberry-Baxter" class="location" data-speaker="Alan Chin" data-count="1" points="228.877 246.68 272.669 248.985 272.669 233.427 261.145 202.312 250.773 198.855 250.197 163.706 215.048 165.434 206.405 201.736 224.843 223.055 228.877 246.68" fill="#231f20" opacity="0"/>
+		<polygon id="21-Mott" class="location" data-speaker="Jan Lee" data-count="1" points="484.412 90.975 472.745 100.68 472.745 118.95 466.381 122.375 465.32 145.212 491.837 162.34 500.322 153.205 493.958 98.397 484.412 90.975" fill="#231f20" opacity="0"/>
 	</g>
 
 	<g id="mapNames">
@@ -35,9 +35,26 @@
 
 </svg>
 
-<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="785.2913" height="322.7607" viewBox="0 0 785.2913 322.7607">
+<div id="locationPopup">
+	<div id="locationPopupInner">
+		
+		<div id="speaker">
+			<span class="lSpeaker"></span>
+		</div>
+		
+		<audio id="player" controls="controls"><source id="lAudio" src=""/></audio>
 
-<g id="picture"><image width="4506" height="1852" transform="scale(0.1743)" xlink:href="../../../../../../../../Users/aaronreiss/Sites/LandmarksTC/images/mapTest2.jpg"/></g> -->
+		<a class="close" onclick="closeBox()">X</a>
+
+		<div class="slideshow-container">
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+			<br>
+		
+		<div class="pager" style="text-align:center"></div>
+	</div>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
@@ -71,23 +88,6 @@
 	<g><image id="67-Bayard" class="location" data-speaker="Ping Chong" data="data" data-count="3" width="96" height="195" transform="translate(470 70) scale(0.44)" xlink:href="images/plaza.png"/></g>
 </svg>
 
-
-<div id="locationPopup">
-	<div id="locationPopupInner" style="position:relative; left: -50%;">
-		
-		<div id="speaker"><span class="lSpeaker"></span></div>
-		
-		<audio id="player" controls="controls"><source id="lAudio" src=""/></audio>
-
-			<div class="slideshow-container">
-				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<br>
-		
-		<div class="pager" style="text-align:center"></div>
-	</div>
-</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
