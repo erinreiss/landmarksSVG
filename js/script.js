@@ -30,6 +30,7 @@ $(locations).mouseleave(
 
 $(locations).click(
 	function(){
+		$('#foreClick').css("display", "none");
 		$('#locationPopup').css("visibility", "visible");
 		var thisAudio = ("audio/"+this.id+".mp3");
 		var speaker = $(this).data("speaker");
@@ -62,26 +63,24 @@ $(locations).click(
 		
 		console.log(count);
 		console.log(speaker);
-		// changeTrack(thisAudio);
+		changeTrack(thisAudio);
 		currentSlide(1);
 		$('.lSpeaker').text(speaker);
-		//old stuff that works with Json
-				// console.log(matchData[i].lAudio);
-				// $('.lSpeaker').text(matchData[i].lSpeaker);
-				// $('.jobFill').text(matchData[i].jobFill);
-				// $('.timeFill').text(matchData[i].timeFill);
-				// $('.fromFill').text(matchData[i].fromFill);
-				// $('.bioFill').html("&ldquo;" + matchData[i].bioFill + "&rdquo;");
-				// $('#streetTitleCh').html("&ldquo;" + matchData[i].streetTitleCh + "&rdquo;");
-				// $('#streetTitleEn').text(matchData[i].streetTitleEn);
-				// changeTrack(matchData[i].lAudio);
-				// break;
 	}
 );
 
-// //Closing the PopUp
+// Closing the PopUp and pausing the audio
 function closeBox() {
   $('#locationPopup').css("visibility", "hidden");
+  pauseTrack();
+}
+
+// function to pause audio player on eon clicking the X
+
+function pauseTrack(sourceUrl) {
+    var audioDues = $("#player");      
+    audioDues[0].pause();
+    audioDues[0].load();//suspends and restores all audio element
 }
 
 // function to reload audio player on each click
@@ -93,7 +92,7 @@ function changeTrack(sourceUrl) {
     audioDues[0].load();//suspends and restores all audio element
     audioDues[0].play();
 }
-
+    
 //Animating the slide show
 
 var slideIndex = 1;
