@@ -1,7 +1,8 @@
 Features:
 
-- Not a map
-- HTML text that represents various sites
+- Not a geo-referenced map
+- A handdrawn "map"
+- A jpg map with clickable SVG elements
 - Info box with:
  - responsive text
  - responsive photo carousel
