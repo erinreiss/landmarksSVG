@@ -23,6 +23,10 @@ html {
   left: 0px;
 }
 
+#mapNames{
+  pointer-events: none;
+}
+
 /*#foreRight{
   float: right;
   bottom: 0px;
